@@ -8,6 +8,7 @@ public class AdventureResult {
     private String winner;
     private int rounds;
     private String reward;
+    private boolean heroWon;
     private final List<String> log = new ArrayList<>();
 
     public String getWinner() {
@@ -34,8 +35,20 @@ public class AdventureResult {
         this.reward = reward;
     }
 
+    public boolean isHeroWon() {
+        return heroWon;
+    }
+
+    public void setHeroWon(boolean heroWon) {
+        this.heroWon = heroWon;
+    }
+
     public void addLine(String line) {
         log.add(line);
+    }
+
+    public void addLine(int index, String line) {
+        log.add(index, line);
     }
 
     public List<String> getLog() {
